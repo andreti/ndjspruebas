@@ -1,0 +1,15 @@
+extends layout
+     
+block content
+	section
+
+		if vacio == false
+			form(action='/actualizar', method='post')
+				input(type='hidden', name='id', value=universidad.id)
+				label Nombre:
+				input(name='nombre', value=universidad.nombre)
+				label Ciudad:
+				input(name='ciudad', value=universidad.ciudad)
+				input(type='submit', value='Actualizar')
+		else
+			h2 El id de la universidad no existe
